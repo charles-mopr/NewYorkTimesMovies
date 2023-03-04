@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NewYorkTimesMovies</string>
+    <string name="title">New York Times Top Movies Today</string>
 </resources>
