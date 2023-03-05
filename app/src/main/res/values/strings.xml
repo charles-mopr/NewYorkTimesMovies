@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">NewYorkTimesMovies</string>
-    <string name="title">New York Times Top Movies Today</string>
+    <string name="title">New York Times Critic\'s Picks movies</string>
+    <string name="project">Android 2 Project 1</string>
+    <string name="mainButton">Show Movie List</string>
+    <string name="copyWright">Copyright (c) 2023 The New York Times Company. All Rights Reserved.</string>
+    <string name="student">Charles Sudipta Roy</string>
+    <string name="imgView_desc">Movie poster</string>
+    <string name="image_description">Image Description</string>
 </resources>
