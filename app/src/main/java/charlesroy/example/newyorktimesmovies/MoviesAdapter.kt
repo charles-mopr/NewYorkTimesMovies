@@ -25,10 +25,10 @@ class MoviesAdapter :
         var imageView: ImageView
 
         init {
-            textViewTitle = view.findViewById(R.id.tv_title)
-            textViewSummary = view.findViewById(R.id.tv_summary)
-            textViewMPAARating = view.findViewById(R.id.tv_mpaa_rating)
-            imageView = view.findViewById(R.id.imgView_multimedia)
+            textViewTitle = view.findViewById(R.id.title_text)
+            textViewSummary = view.findViewById(R.id.summary_text)
+            textViewMPAARating = view.findViewById(R.id.rating_text)
+            imageView = view.findViewById(R.id.multimedia_imageView)
         }
     }
 
@@ -43,7 +43,13 @@ class MoviesAdapter :
         var movie = data.get(position)
         viewHolder.textViewTitle.setText(movie.display_title)
         viewHolder.textViewSummary.setText(movie.summary_short)
-        viewHolder.textViewMPAARating.setText(movie.mpaa_rating)
+        if (movie.mpaa_rating == ""){
+            viewHolder.textViewMPAARating.setText("No Rating")
+        }
+        else{
+            viewHolder.textViewMPAARating.setText(movie.mpaa_rating)
+        }
+
         Picasso.get().load(movie.multimedia.src).into(viewHolder.imageView)
     }
 

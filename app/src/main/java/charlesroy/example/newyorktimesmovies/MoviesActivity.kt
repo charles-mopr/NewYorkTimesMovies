@@ -24,9 +24,7 @@ class MoviesActivity : AppCompatActivity() {
         binding.recyclerViewCriticsPicks.adapter = adapter
 
         val apiKey = "EAKAIHibAmyxvRd9KebTfLpgR91QaVjr"
-        val base = "https://api.nytimes.com/svc/movies/v2/"
-        val query = "reviews/picks.json?api-key="
-        val url = "$base$query$apiKey"
+        val url = "https://api.nytimes.com/svc/movies/v2/reviews/picks.json?api-key=$apiKey"
         val thread = Thread {
             fetchMoviesList(url)
         }
